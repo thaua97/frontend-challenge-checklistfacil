@@ -30,15 +30,16 @@ export class AppComponent implements OnInit {
     this.store.dispatch(TodoListActions.loadTodoList());
   }
 
-  create() {
-    this.store.dispatch(
+  async create() {
+    await this.store.dispatch(
       TodoListActions.createTodoList({
         task: {
           description: this.description.value,
+          status: TaskStatus.ToDo,
         },
       })
     );
-    this.description.setValue('');
+  //  this.description.setValue('');
   }
 
   remove(task: Task) {

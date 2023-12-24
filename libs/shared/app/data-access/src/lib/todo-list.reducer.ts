@@ -23,10 +23,10 @@ export const reducer = createReducer(
     ...state,
     taskList: state.taskList.concat(task),
   })),
-  on(TodoListActions.removeTodoListSuccess, (state, { taskId }) => ({
-    ...state,
-    taskList: state.taskList.filter(({ id }) => id !== taskId),
-  })),
+  // on(TodoListActions.removeTodoListSuccess, (state, { taskId }) => ({
+  //   ...state,
+  //   taskList: state.taskList.filter(({ id }) => id !== taskId),
+  // })),
   on(TodoListActions.updateTodoListSuccess, (state, { task }) => ({
     ...state,
     taskList: state.taskList.map((t) => (t.id === task.id ? task : t)),
