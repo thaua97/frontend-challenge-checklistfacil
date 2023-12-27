@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
         },
       })
     );
-  //  this.description.setValue('');
+   this.description.setValue('');
   }
 
   remove(task: Task) {

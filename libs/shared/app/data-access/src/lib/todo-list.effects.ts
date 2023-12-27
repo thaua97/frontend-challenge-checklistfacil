@@ -14,7 +14,9 @@ export class TodoListEffects {
       exhaustMap(() =>
         this.service.list().pipe(
           map((tasks) => TodoListActions.loadTodoListSuccess({ tasks })),
-          catchError((error) => of(TodoListActions.loadTodoListError(error)))
+          catchError((error) =>
+            of(TodoListActions.loadTodoListError(error))
+          )
         )
       )
     );
