@@ -3641,6 +3641,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/jasmine@npm:^5.1.4":
+  version: 5.1.4
+  resolution: "@types/jasmine@npm:5.1.4"
+  checksum: 1b2048d988077aee747a72fab31f4e0820f928c25e886ab91aa5a1ee2d4277655c22f81feed5d7b3b15cc61542878568a24b2381457eb21dfc84250c693f980a
+  languageName: node
+  linkType: hard
+
 "@types/jest@npm:28.1.1":
   version: 28.1.1
   resolution: "@types/jest@npm:28.1.1"
@@ -7959,6 +7966,7 @@ __metadata:
     "@nrwl/node": 15.0.0
     "@nrwl/nx-cloud": latest
     "@nrwl/workspace": 15.0.0
+    "@types/jasmine": ^5.1.4
     "@types/jest": 28.1.1
     "@types/level": ^6.0.1
     "@types/node": 16.11.7
