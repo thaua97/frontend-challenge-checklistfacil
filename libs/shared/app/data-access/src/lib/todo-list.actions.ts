@@ -29,17 +29,17 @@ export const createTodoListError = createAction(
 );
 
 export const removeTodoList = createAction(
-  '[TodoList] Create TodoList',
+  '[TodoList] Remove TodoList',
   props<{ taskId: string }>()
 );
 
 export const removeTodoListSuccess = createAction(
-  '[TodoList] Create TodoList Success',
+  '[TodoList] Remove TodoList Success',
   props<{ taskId: string }>()
 );
 
 export const removeTodoListError = createAction(
-  '[TodoList] Create TodoList error',
+  '[TodoList] Remove TodoList error',
   props<{ error: any }>()
 );
 
