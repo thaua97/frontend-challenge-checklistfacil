@@ -10,10 +10,7 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -24,13 +21,11 @@
       "@frontend-challenge/shared/app/data-access": [
         "libs/shared/app/data-access/src/index.ts"
       ],
+      "@frontend-challenge/shared/app/ui": ["libs/shared/app/ui/src/index.ts"],
       "@frontend-challenge/shared/util/api-interfaces": [
         "libs/shared/util/api-interfaces/src/index.ts"
       ]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

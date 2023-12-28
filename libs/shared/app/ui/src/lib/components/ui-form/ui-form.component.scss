@@ -1,0 +1,10 @@
+.ui-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+
+  &__button {
+    margin: 16px auto;
+    flex: 0 0 auto;
+  }
+}
