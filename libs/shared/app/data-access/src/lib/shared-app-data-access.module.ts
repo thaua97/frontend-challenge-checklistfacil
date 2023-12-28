@@ -6,10 +6,15 @@ import { EffectsModule } from '@ngrx/effects';
 import { TodoListEffects } from './todo-list.effects';
 import {HttpClientModule} from "@angular/common/http";
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   imports: [
     CommonModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     StoreModule.forFeature(
       fromTodoList.todoListFeatureKey,
       fromTodoList.reducer

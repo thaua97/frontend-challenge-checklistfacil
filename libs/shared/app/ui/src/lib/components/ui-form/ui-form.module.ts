@@ -1,26 +1,26 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
-import { AppComponent } from './app.component';
+import { UIFormComponent } from './ui-form.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../environments/environment';
+import { environment } from '../../../environments/environment';
 import { SharedAppDataAccessModule } from '@frontend-challenge/shared/app/data-access';
-import { SharedAppUiModule } from '@frontend-challenge/shared/app/ui';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgxSpinnerModule } from 'ngx-spinner';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [UIFormComponent],
   imports: [
-    BrowserModule,
+    CommonModule,
+    ReactiveFormsModule,
+    SharedAppDataAccessModule,
     HttpClientModule,
     StoreModule.forRoot(
       {},
@@ -34,18 +34,12 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     ),
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    MatIconModule,
-    MatListModule,
-    SharedAppDataAccessModule,
-    SharedAppUiModule,
-    BrowserAnimationsModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
-    ReactiveFormsModule,
-    NgxSpinnerModule
   ],
-  providers: [],
-  bootstrap: [AppComponent],
+  exports: [UIFormComponent]
 })
-export class AppModule {}
+
+export class UIFormModule {}
