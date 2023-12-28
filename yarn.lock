@@ -7975,6 +7975,7 @@ __metadata:
     jest-preset-angular: ~12.2.2
     level: ^8.0.0
     ng-packagr: ~14.2.0
+    ngx-spinner: 14.0.0
     ngx-toastr: 15.2.2
     nx: 15.0.0
     postcss: ^8.4.5
@@ -10897,6 +10898,18 @@ __metadata:
   bin:
     ng-packagr: cli/main.js
   checksum: e277d3d9465c0ac0caaf3be36a68f04c110275324359f63d107bd08709fed73141420fbb142fec144fa8b342f2a4b42439f7ffaaa771373539d16d37a43b696c
+  languageName: node
+  linkType: hard
+
+"ngx-spinner@npm:14.0.0":
+  version: 14.0.0
+  resolution: "ngx-spinner@npm:14.0.0"
+  dependencies:
+    tslib: ^2.3.0
+  peerDependencies:
+    "@angular/common": ^14.0.0
+    "@angular/core": ^14.0.0
+  checksum: a173f5dc9741b1e849d7724f3aeb67a4a93d8f88147b128015c68a6071b98aefe0adbf0d2d2ad11433a99f14a83ed46327f828dca8f4fc6a2aecdcba057beef2
   languageName: node
   linkType: hard
 

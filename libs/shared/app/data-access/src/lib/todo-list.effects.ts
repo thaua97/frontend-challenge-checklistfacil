@@ -6,18 +6,21 @@ import * as TodoListActions from './todo-list.actions';
 import { TodoListService } from './todo-list.service';
 import { of } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Injectable()
 export class TodoListEffects {
   constructor(
     private actions$: Actions,
     private service: TodoListService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private spinner: NgxSpinnerService,
   ) {}
 
   loadTodoList$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(TodoListActions.loadTodoList),
+      tap(() => this.spinner.show()),
       exhaustMap(() =>
         this.service.list().pipe(
           map((tasks) =>TodoListActions.loadTodoListSuccess({ tasks })),
@@ -26,7 +29,8 @@ export class TodoListEffects {
               progressBar: true,
             })
             return of(TodoListActions.loadTodoListError(error))
-          })
+          }),
+          tap(() => setTimeout(() => {this.spinner.hide();}, 2000)),
         )
       )
     );
@@ -91,6 +95,4 @@ export class TodoListEffects {
       )
     );
   });
-
-
 }
