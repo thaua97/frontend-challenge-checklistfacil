@@ -9,7 +9,6 @@ import {
   Task,
   TaskStatus,
 } from '@frontend-challenge/shared/util/api-interfaces';
-import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'frontend-challenge-root',
@@ -17,7 +16,6 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  description: FormControl = new FormControl<string>('');
   todo$: Observable<Task[]> = this.store.select(TodoListSelectors.todoTaskList);
   doing$: Observable<Task[]> = this.store.select(
     TodoListSelectors.doingTaskList
@@ -28,18 +26,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.store.dispatch(TodoListActions.loadTodoList());
-  }
-
-  create() {
-    this.store.dispatch(
-      TodoListActions.createTodoList({
-        task: {
-          description: this.description.value,
-          status: TaskStatus.ToDo,
-        },
-      })
-    );
-   this.description.setValue('');
   }
 
   remove(task: Task) {
