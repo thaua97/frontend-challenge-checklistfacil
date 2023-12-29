@@ -7,7 +7,6 @@ import { UIFormModule } from './components/ui-form/ui-form.module';
     CommonModule,
     BrowserAnimationsModule,
     UIFormModule,
-
   ],
   exports: [UIFormModule],
 })

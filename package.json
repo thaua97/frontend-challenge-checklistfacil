@@ -62,6 +62,7 @@
     "@nrwl/node": "15.0.0",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/workspace": "15.0.0",
+    "@types/jasmine": "^5.1.4",
     "@types/jest": "28.1.1",
     "@types/level": "^6.0.1",
     "@types/node": "16.11.7",
