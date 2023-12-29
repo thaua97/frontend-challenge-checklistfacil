@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [UIFormComponent],
@@ -22,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     SharedAppDataAccessModule,
     HttpClientModule,
+    ToastrModule.forRoot(),
     StoreModule.forRoot(
       {},
       {
