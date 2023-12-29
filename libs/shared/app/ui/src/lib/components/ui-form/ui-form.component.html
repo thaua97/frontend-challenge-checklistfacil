@@ -1,12 +1,11 @@
-<form class="ui-form">
+<form class="ui-form" (submit)="create($event)">
   <h2 subheading-2>Nova tarefa</h2>
   <mat-form-field appearance="outline">
     <mat-label>Descrição</mat-label>
     <input type="text" matInput [formControl]="description">
   </mat-form-field>
   <button
-    (click)="create()"
-    type="button"
+    type="submit"
     mat-flat-button
     color="primary"
     class="ui-forn__button"
